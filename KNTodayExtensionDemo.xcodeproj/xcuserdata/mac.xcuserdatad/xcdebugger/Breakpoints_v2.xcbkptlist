@@ -10,28 +10,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TodayExtensionDemo/TodayViewController.m"
-            timestampString = "570014967.65422"
+            timestampString = "570016680.317814"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "-widgetPerformUpdateWithCompletionHandler:"
-            landmarkType = "7">
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "TodayViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TodayExtensionDemo/TodayViewController.m"
-            timestampString = "570014967.654941"
+            timestampString = "570016680.318207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "-viewWillAppear:"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "-setupSubviews"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

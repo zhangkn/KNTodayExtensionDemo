@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04245BCA21F9C0040018E827 /* TodayItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04245BC721F9C0040018E827 /* TodayItemCell.xib */; };
+		04245BCB21F9C0040018E827 /* TodayItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04245BC821F9C0040018E827 /* TodayItemCell.m */; };
 		04D7068621F9A3700024EDD0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D7068521F9A3700024EDD0 /* AppDelegate.m */; };
 		04D7068921F9A3700024EDD0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D7068821F9A3700024EDD0 /* ViewController.m */; };
 		04D7068C21F9A3700024EDD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D7068A21F9A3700024EDD0 /* Main.storyboard */; };
@@ -66,6 +68,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04245BC721F9C0040018E827 /* TodayItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TodayItemCell.xib; path = ../../../github/TodayExtension/TodayExtentsion/TodayItemCell.xib; sourceTree = "<group>"; };
+		04245BC821F9C0040018E827 /* TodayItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayItemCell.m; sourceTree = "<group>"; };
+		04245BC921F9C0040018E827 /* TodayItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TodayItemCell.h; path = ../../../github/TodayExtension/TodayExtentsion/TodayItemCell.h; sourceTree = "<group>"; };
 		04D7068121F9A3700024EDD0 /* KNTodayExtensionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KNTodayExtensionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D7068421F9A3700024EDD0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04D7068521F9A3700024EDD0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -217,6 +222,9 @@
 			children = (
 				04D706BF21F9A37F0024EDD0 /* TodayViewController.h */,
 				04D706C021F9A37F0024EDD0 /* TodayViewController.m */,
+				04245BC921F9C0040018E827 /* TodayItemCell.h */,
+				04245BC821F9C0040018E827 /* TodayItemCell.m */,
+				04245BC721F9C0040018E827 /* TodayItemCell.xib */,
 				04D706C221F9A37F0024EDD0 /* MainInterface.storyboard */,
 				04D706C521F9A37F0024EDD0 /* Info.plist */,
 			);
@@ -401,6 +409,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04245BCA21F9C0040018E827 /* TodayItemCell.xib in Resources */,
 				04D706C421F9A37F0024EDD0 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,6 +539,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04245BCB21F9C0040018E827 /* TodayItemCell.m in Sources */,
 				04D706C121F9A37F0024EDD0 /* TodayViewController.m in Sources */,
 				04D706D121F9B75F0024EDD0 /* KNTodayItemModel.m in Sources */,
 			);

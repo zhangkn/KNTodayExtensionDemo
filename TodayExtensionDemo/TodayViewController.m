@@ -9,9 +9,15 @@
 #import "TodayViewController.h"
 #import <NotificationCenter/NotificationCenter.h>
 
-@interface TodayViewController () <NCWidgetProviding>
+@interface TodayViewController () <NCWidgetProviding,UITableViewDelegate,UITableViewDataSource>
+
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+@property (weak, nonatomic)  UITableView *tableView;
+
+@property (nonatomic, strong) NSMutableArray * dataArray;
+
 
 @end
 
@@ -27,8 +33,57 @@
 //    self.extensionContext.widgetLargestAvailableDisplayMode = NCWidgetDisplayModeExpanded;//使用3DTouch唤出的弹窗依旧是110，上面代码只是改变了通知中心的高度
     //完成下面代理 widgetActiveDisplayModeDidChange：withMaximumSize
 
-    
+    [self setupSubviews];
+
 }
+
+
+
+- (UITableView *)tableView{
+    if (nil == _tableView) {
+        
+        UITableView *tmp =[[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableView = tmp;
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.tableFooterView = [UIView new];
+        [self.view addSubview:_tableView];
+        
+        // 添加约束
+//        [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+//            
+//            make.left.right.equalTo(self.titleLabel);
+//            
+//            make.top.equalTo(self.titleLabel.mas_bottom).offset(10);
+//            
+//            make.bottom.equalTo(self.view.mas_bottom).offset(0);
+//            make.top.equalTo(self.titleLabel.mas_bottom).offset(10);
+//            
+//            
+//        }];
+        
+        
+        
+        
+        
+    }
+    return _tableView;
+}
+
+-(void)setupSubviews{
+    
+//    self.tableView = [UITableView alloc ]initWithFrame:<#(CGRect)#> style:<#(UITableViewStyle)#>;
+    
+
+
+    
+    self.tableView.rowHeight = 60;
+    
+    
+//    [self.tableView registerNib:[UINib nibWithNibName:@"TodayItemCell" bundle:nil] forCellReuseIdentifier:@"TodayItemCell"];
+}
+
+
 
 -(void)setupData{
     // 将小部件展现模型设置为可展开
@@ -118,4 +173,23 @@
     [self.extensionContext openURL:[NSURL URLWithString:@"knTodayExtensionDemo://enterApp"] completionHandler:nil];
 }
 
+//@end
+
+#pragma mark- UITableViewDelegate,UITableViewDataSource
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.dataArray.count;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    TodayItemCell * cell = [tableView dequeueReusableCellWithIdentifier:@"TodayItemCell"];
+    KNTodayItemModel * model = self.dataArray[indexPath.row];
+    cell.iconImageView.image = [UIImage imageNamed:model.icon];
+    cell.titleLabel.text = model.title;
+    return cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    KNTodayItemModel * model = self.dataArray[indexPath.row];
+    //点击跳转到APP
+    [self.extensionContext openURL:[NSURL URLWithString:model.handerUrl] completionHandler:nil];
+}
 @end

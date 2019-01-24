@@ -23,4 +23,6 @@ target 'TodayExtensionDemo' do
 
   # Pods for TodayExtentsion
   pod 'JSONModel', '~> 1.7.0'
+  
+  pod 'Masonry'
 end
