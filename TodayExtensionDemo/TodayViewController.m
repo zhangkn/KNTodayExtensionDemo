@@ -14,7 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
-@property (weak, nonatomic)  UITableView *tableView;
+@property (weak, nonatomic) IBOutlet  UITableView *tableView;
 
 @property (nonatomic, strong) NSMutableArray * dataArray;
 
@@ -39,36 +39,40 @@
 
 
 
-- (UITableView *)tableView{
-    if (nil == _tableView) {
-        
-        UITableView *tmp =[[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-        _tableView = tmp;
-        _tableView.delegate = self;
-        _tableView.dataSource = self;
-        _tableView.tableFooterView = [UIView new];
-        [self.view addSubview:_tableView];
-        
-        // 添加约束
-//        [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-//            
-//            make.left.right.equalTo(self.titleLabel);
-//            
-//            make.top.equalTo(self.titleLabel.mas_bottom).offset(10);
-//            
-//            make.bottom.equalTo(self.view.mas_bottom).offset(0);
-//            make.top.equalTo(self.titleLabel.mas_bottom).offset(10);
-//            
-//            
-//        }];
-        
-        
-        
-        
-        
-    }
-    return _tableView;
-}
+//- (UITableView *)tableView{
+//    if (nil == _tableView) {
+//
+//        UITableView *tmpView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) style:UITableViewStylePlain];//初始化方法
+//
+////        UITableView *tmp =[[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+//        _tableView = tmpView;
+//        _tableView.delegate = self;
+//        _tableView.dataSource = self;
+//        _tableView.tableFooterView = [UIView new];
+//        [self.view addSubview:_tableView];
+//
+//        // 添加约束
+////        [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+////
+//////            make.left.right.equalTo(self.titleLabel);
+//////            make.width.mas_offset([UIScreen mainScreen].bounds.size.width);
+//////            make.height.mas_offset([UIScreen mainScreen].bounds.size.height);
+////
+////            make.top.equalTo(self.titleLabel.mas_bottom).offset(10);
+////
+////            make.bottom.equalTo(self.view.mas_bottom).offset(0);
+////            make.top.equalTo(self.titleLabel.mas_bottom).offset(10);
+////
+////
+////        }];
+//
+//
+//
+//
+//
+//    }
+//    return _tableView;
+//}
 
 -(void)setupSubviews{
     
@@ -80,7 +84,7 @@
     self.tableView.rowHeight = 60;
     
     
-//    [self.tableView registerNib:[UINib nibWithNibName:@"TodayItemCell" bundle:nil] forCellReuseIdentifier:@"TodayItemCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"TodayItemCell" bundle:nil] forCellReuseIdentifier:@"TodayItemCell"];
 }
 
 
@@ -191,5 +195,26 @@
     KNTodayItemModel * model = self.dataArray[indexPath.row];
     //点击跳转到APP
     [self.extensionContext openURL:[NSURL URLWithString:model.handerUrl] completionHandler:nil];
+}
+
+-(NSMutableArray *)dataArray{
+    if (!_dataArray) {
+        NSString *urlString = [NSString stringWithFormat:@"knTodayExtensionDemo://set/markCode=%@&code=%@&yesclose=%@&stockName=%@",@"10200",@"200",@"YES",[@"阳" stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
+        NSArray * array = @[
+                            @{@"icon":@"bangzhu",@"handerUrl":@"TodayExtensionDemo://help",@"title":@"帮助"},
+                            @{@"icon":@"fankui",@"handerUrl":@"TodayExtensionDemo://feedback",@"title":@"反馈"},
+                            @{@"icon":@"gerenxinxi",@"handerUrl":@"TodayExtensionDemo://userInfo",@"title":@"个人信息"},
+                            @{@"icon":@"kefu",@"handerUrl":@"TodayExtensionDemo://customerService",@"title":@"客服"},
+                            @{@"icon":@"shezhi",@"handerUrl":urlString,@"title":@"设置"},
+                            ];
+        _dataArray = [NSMutableArray arrayWithCapacity:array.count];
+        for (NSDictionary * dic in  array) {
+            KNTodayItemModel * model = [[KNTodayItemModel alloc] initWithDictionary:dic error:nil];
+            if (model) {
+                [_dataArray addObject:model];
+            }
+        }
+    }
+    return _dataArray;
 }
 @end

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		04245BCA21F9C0040018E827 /* TodayItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04245BC721F9C0040018E827 /* TodayItemCell.xib */; };
 		04245BCB21F9C0040018E827 /* TodayItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04245BC821F9C0040018E827 /* TodayItemCell.m */; };
+		04245BCD21F9C5130018E827 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04245BCC21F9C5130018E827 /* MainInterface.storyboard */; };
+		04245BCE21F9C62A0018E827 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04D7068D21F9A3710024EDD0 /* Assets.xcassets */; };
 		04D7068621F9A3700024EDD0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D7068521F9A3700024EDD0 /* AppDelegate.m */; };
 		04D7068921F9A3700024EDD0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D7068821F9A3700024EDD0 /* ViewController.m */; };
 		04D7068C21F9A3700024EDD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D7068A21F9A3700024EDD0 /* Main.storyboard */; };
@@ -19,7 +21,6 @@
 		04D706A921F9A3720024EDD0 /* KNTodayExtensionDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D706A821F9A3720024EDD0 /* KNTodayExtensionDemoUITests.m */; };
 		04D706BD21F9A37F0024EDD0 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D706BC21F9A37F0024EDD0 /* NotificationCenter.framework */; };
 		04D706C121F9A37F0024EDD0 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D706C021F9A37F0024EDD0 /* TodayViewController.m */; };
-		04D706C421F9A37F0024EDD0 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D706C221F9A37F0024EDD0 /* MainInterface.storyboard */; };
 		04D706C821F9A37F0024EDD0 /* TodayExtensionDemo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 04D706BA21F9A37F0024EDD0 /* TodayExtensionDemo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		04D706D021F9B75F0024EDD0 /* KNTodayItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D706CF21F9B75F0024EDD0 /* KNTodayItemModel.m */; };
 		04D706D121F9B75F0024EDD0 /* KNTodayItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D706CF21F9B75F0024EDD0 /* KNTodayItemModel.m */; };
@@ -71,6 +72,7 @@
 		04245BC721F9C0040018E827 /* TodayItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TodayItemCell.xib; path = ../../../github/TodayExtension/TodayExtentsion/TodayItemCell.xib; sourceTree = "<group>"; };
 		04245BC821F9C0040018E827 /* TodayItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayItemCell.m; sourceTree = "<group>"; };
 		04245BC921F9C0040018E827 /* TodayItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TodayItemCell.h; path = ../../../github/TodayExtension/TodayExtentsion/TodayItemCell.h; sourceTree = "<group>"; };
+		04245BCC21F9C5130018E827 /* MainInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		04D7068121F9A3700024EDD0 /* KNTodayExtensionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KNTodayExtensionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D7068421F9A3700024EDD0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04D7068521F9A3700024EDD0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -91,7 +93,6 @@
 		04D706BC21F9A37F0024EDD0 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		04D706BF21F9A37F0024EDD0 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
 		04D706C021F9A37F0024EDD0 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
-		04D706C321F9A37F0024EDD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		04D706C521F9A37F0024EDD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04D706CE21F9B75F0024EDD0 /* KNTodayItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KNTodayItemModel.h; sourceTree = "<group>"; };
 		04D706CF21F9B75F0024EDD0 /* KNTodayItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KNTodayItemModel.m; sourceTree = "<group>"; };
@@ -224,8 +225,8 @@
 				04D706C021F9A37F0024EDD0 /* TodayViewController.m */,
 				04245BC921F9C0040018E827 /* TodayItemCell.h */,
 				04245BC821F9C0040018E827 /* TodayItemCell.m */,
+				04245BCC21F9C5130018E827 /* MainInterface.storyboard */,
 				04245BC721F9C0040018E827 /* TodayItemCell.xib */,
-				04D706C221F9A37F0024EDD0 /* MainInterface.storyboard */,
 				04D706C521F9A37F0024EDD0 /* Info.plist */,
 			);
 			path = TodayExtensionDemo;
@@ -410,7 +411,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				04245BCA21F9C0040018E827 /* TodayItemCell.xib in Resources */,
-				04D706C421F9A37F0024EDD0 /* MainInterface.storyboard in Resources */,
+				04245BCE21F9C62A0018E827 /* Assets.xcassets in Resources */,
+				04245BCD21F9C5130018E827 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,14 +582,6 @@
 				04D7069021F9A3710024EDD0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		04D706C221F9A37F0024EDD0 /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04D706C321F9A37F0024EDD0 /* Base */,
-			);
-			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
