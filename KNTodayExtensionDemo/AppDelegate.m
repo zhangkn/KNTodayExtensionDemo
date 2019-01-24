@@ -87,9 +87,9 @@
     subVC.title = nameTitle;
     if ([self.window.rootViewController isKindOfClass:[UINavigationController class]]) {
         UINavigationController * nav = (UINavigationController *)self.window.rootViewController;
-        [nav pushViewController:subVC animated:YES];
-    }else if ([self.window.rootViewController isKindOfClass:[UIViewController class]]){
-        [self.window.rootViewController.navigationController pushViewController:subVC animated:YES];
+        [nav pushViewController:subVC animated:NO];
+    }else if ([self.window.rootViewController isKindOfClass:[ViewController class]]){
+        [self.window.rootViewController.navigationController pushViewController:subVC animated:NO];
     }
 }
 
