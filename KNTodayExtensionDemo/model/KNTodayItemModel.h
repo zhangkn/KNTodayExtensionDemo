@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <JSONModel/JSONModel.h>
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KNTodayItemModel : NSObject
+@interface KNTodayItemModel : JSONModel
 
 @property (nonatomic, copy) NSString * icon;
 @property (nonatomic, copy) NSString * handerUrl;

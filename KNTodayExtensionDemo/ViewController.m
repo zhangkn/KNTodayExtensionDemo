@@ -34,11 +34,11 @@
 -(NSMutableArray *)dataArray{
     if (!_dataArray) {
         NSArray * array = @[
-                            @{@"icon":@"bangzhu",@"handerUrl":@"TodayExtensionDemo://help",@"title":@"帮助"},
-                            @{@"icon":@"fankui",@"handerUrl":@"TodayExtensionDemo://feedback",@"title":@"反馈"},
-                            @{@"icon":@"gerenxinxi",@"handerUrl":@"TodayExtensionDemo://userInfo",@"title":@"个人信息"},
-                            @{@"icon":@"kefu",@"handerUrl":@"TodayExtensionDemo://customerService",@"title":@"客服"},
-                            @{@"icon":@"shezhi",@"handerUrl":@"TodayExtensionDemo://set",@"title":@"设置"},
+                            @{@"icon":@"bangzhu",@"handerUrl":@"knTodayExtensionDemo://help",@"title":@"帮助"},
+                            @{@"icon":@"fankui",@"handerUrl":@"knTodayExtensionDemo://feedback",@"title":@"反馈"},
+                            @{@"icon":@"gerenxinxi",@"handerUrl":@"knTodayExtensionDemo://userInfo",@"title":@"个人信息"},
+                            @{@"icon":@"kefu",@"handerUrl":@"knTodayExtensionDemo://customerService",@"title":@"客服"},
+                            @{@"icon":@"shezhi",@"handerUrl":@"knTodayExtensionDemo://set",@"title":@"设置"},
                             ];
         _dataArray = [NSMutableArray arrayWithCapacity:array.count];
         for (NSDictionary * dic in  array) {
@@ -62,16 +62,23 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
-    TodayItemModel * model = self.dataArray[indexPath.row];
+    KNTodayItemModel * model = self.dataArray[indexPath.row];
     cell.textLabel.text = model.title;
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    TodayItemModel * model = self.dataArray[indexPath.row];
-    CYSubViewController * subVC = [CYSubViewController new];
-    subVC.title = model.title;
-    [self.navigationController pushViewController:subVC animated:YES];
+    KNTodayItemModel * model = self.dataArray[indexPath.row];
+
+//    []
+    [[UIApplication sharedApplication]  openURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",@"",model.handerUrl ? model.handerUrl :@"knTodayExtensionDemo://enterApp"]]];
+
+//    [self.extensionContext openURL:[NSURL URLWithString:@"knTodayExtensionDemo://enterApp"] completionHandler:nil];
+
+//
+//    CYSubViewController * subVC = [CYSubViewController new];
+//    subVC.title = model.title;
+//    [self.navigationController pushViewController:subVC animated:YES];
 }
 @end
 

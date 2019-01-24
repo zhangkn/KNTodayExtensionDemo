@@ -56,7 +56,7 @@
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
     // 可以先回到应用首页，在跳转
-    if ([url.absoluteString hasPrefix:@"TodayExtensionDemo"]) {
+    if ([url.absoluteString hasPrefix:@"knTodayExtensionDemo"]) {
         if ([url.host isEqualToString:@"enterApp"]) {
             //进入APP
         }else if ([url.host isEqualToString:@"feedback"]) {
