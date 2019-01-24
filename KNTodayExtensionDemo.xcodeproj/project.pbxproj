@@ -15,6 +15,10 @@
 		04D7069421F9A3710024EDD0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D7069321F9A3710024EDD0 /* main.m */; };
 		04D7069E21F9A3720024EDD0 /* KNTodayExtensionDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D7069D21F9A3720024EDD0 /* KNTodayExtensionDemoTests.m */; };
 		04D706A921F9A3720024EDD0 /* KNTodayExtensionDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D706A821F9A3720024EDD0 /* KNTodayExtensionDemoUITests.m */; };
+		04D706BD21F9A37F0024EDD0 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D706BC21F9A37F0024EDD0 /* NotificationCenter.framework */; };
+		04D706C121F9A37F0024EDD0 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D706C021F9A37F0024EDD0 /* TodayViewController.m */; };
+		04D706C421F9A37F0024EDD0 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D706C221F9A37F0024EDD0 /* MainInterface.storyboard */; };
+		04D706C821F9A37F0024EDD0 /* TodayExtensionDemo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 04D706BA21F9A37F0024EDD0 /* TodayExtensionDemo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +36,28 @@
 			remoteGlobalIDString = 04D7068021F9A3700024EDD0;
 			remoteInfo = KNTodayExtensionDemo;
 		};
+		04D706C621F9A37F0024EDD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04D7067921F9A3700024EDD0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04D706B921F9A37F0024EDD0;
+			remoteInfo = TodayExtensionDemo;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		04D706CC21F9A37F0024EDD0 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				04D706C821F9A37F0024EDD0 /* TodayExtensionDemo.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		04D7068121F9A3700024EDD0 /* KNTodayExtensionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KNTodayExtensionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +76,12 @@
 		04D706A421F9A3720024EDD0 /* KNTodayExtensionDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KNTodayExtensionDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D706A821F9A3720024EDD0 /* KNTodayExtensionDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KNTodayExtensionDemoUITests.m; sourceTree = "<group>"; };
 		04D706AA21F9A3720024EDD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04D706BA21F9A37F0024EDD0 /* TodayExtensionDemo.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayExtensionDemo.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		04D706BC21F9A37F0024EDD0 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		04D706BF21F9A37F0024EDD0 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		04D706C021F9A37F0024EDD0 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		04D706C321F9A37F0024EDD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		04D706C521F9A37F0024EDD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +106,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04D706B721F9A37F0024EDD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04D706BD21F9A37F0024EDD0 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -84,6 +123,8 @@
 				04D7068321F9A3700024EDD0 /* KNTodayExtensionDemo */,
 				04D7069C21F9A3720024EDD0 /* KNTodayExtensionDemoTests */,
 				04D706A721F9A3720024EDD0 /* KNTodayExtensionDemoUITests */,
+				04D706BE21F9A37F0024EDD0 /* TodayExtensionDemo */,
+				04D706BB21F9A37F0024EDD0 /* Frameworks */,
 				04D7068221F9A3700024EDD0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,6 +135,7 @@
 				04D7068121F9A3700024EDD0 /* KNTodayExtensionDemo.app */,
 				04D7069921F9A3720024EDD0 /* KNTodayExtensionDemoTests.xctest */,
 				04D706A421F9A3720024EDD0 /* KNTodayExtensionDemoUITests.xctest */,
+				04D706BA21F9A37F0024EDD0 /* TodayExtensionDemo.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,6 +174,25 @@
 			path = KNTodayExtensionDemoUITests;
 			sourceTree = "<group>";
 		};
+		04D706BB21F9A37F0024EDD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04D706BC21F9A37F0024EDD0 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		04D706BE21F9A37F0024EDD0 /* TodayExtensionDemo */ = {
+			isa = PBXGroup;
+			children = (
+				04D706BF21F9A37F0024EDD0 /* TodayViewController.h */,
+				04D706C021F9A37F0024EDD0 /* TodayViewController.m */,
+				04D706C221F9A37F0024EDD0 /* MainInterface.storyboard */,
+				04D706C521F9A37F0024EDD0 /* Info.plist */,
+			);
+			path = TodayExtensionDemo;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,10 +203,12 @@
 				04D7067D21F9A3700024EDD0 /* Sources */,
 				04D7067E21F9A3700024EDD0 /* Frameworks */,
 				04D7067F21F9A3700024EDD0 /* Resources */,
+				04D706CC21F9A37F0024EDD0 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				04D706C721F9A37F0024EDD0 /* PBXTargetDependency */,
 			);
 			name = KNTodayExtensionDemo;
 			productName = KNTodayExtensionDemo;
@@ -188,6 +251,23 @@
 			productReference = 04D706A421F9A3720024EDD0 /* KNTodayExtensionDemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		04D706B921F9A37F0024EDD0 /* TodayExtensionDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04D706C921F9A37F0024EDD0 /* Build configuration list for PBXNativeTarget "TodayExtensionDemo" */;
+			buildPhases = (
+				04D706B621F9A37F0024EDD0 /* Sources */,
+				04D706B721F9A37F0024EDD0 /* Frameworks */,
+				04D706B821F9A37F0024EDD0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TodayExtensionDemo;
+			productName = TodayExtensionDemo;
+			productReference = 04D706BA21F9A37F0024EDD0 /* TodayExtensionDemo.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -208,6 +288,9 @@
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = 04D7068021F9A3700024EDD0;
 					};
+					04D706B921F9A37F0024EDD0 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = 04D7067C21F9A3700024EDD0 /* Build configuration list for PBXProject "KNTodayExtensionDemo" */;
@@ -226,6 +309,7 @@
 				04D7068021F9A3700024EDD0 /* KNTodayExtensionDemo */,
 				04D7069821F9A3720024EDD0 /* KNTodayExtensionDemoTests */,
 				04D706A321F9A3720024EDD0 /* KNTodayExtensionDemoUITests */,
+				04D706B921F9A37F0024EDD0 /* TodayExtensionDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -252,6 +336,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04D706B821F9A37F0024EDD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04D706C421F9A37F0024EDD0 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +376,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04D706B621F9A37F0024EDD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04D706C121F9A37F0024EDD0 /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -296,6 +396,11 @@
 			isa = PBXTargetDependency;
 			target = 04D7068021F9A3700024EDD0 /* KNTodayExtensionDemo */;
 			targetProxy = 04D706A521F9A3720024EDD0 /* PBXContainerItemProxy */;
+		};
+		04D706C721F9A37F0024EDD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04D706B921F9A37F0024EDD0 /* TodayExtensionDemo */;
+			targetProxy = 04D706C621F9A37F0024EDD0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -314,6 +419,14 @@
 				04D7069021F9A3710024EDD0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		04D706C221F9A37F0024EDD0 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04D706C321F9A37F0024EDD0 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -436,7 +549,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A7BAT6XFJ4;
+				DEVELOPMENT_TEAM = 249PMS4KB9;
 				INFOPLIST_FILE = KNTodayExtensionDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -453,7 +566,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A7BAT6XFJ4;
+				DEVELOPMENT_TEAM = 249PMS4KB9;
 				INFOPLIST_FILE = KNTodayExtensionDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -539,6 +652,42 @@
 			};
 			name = Release;
 		};
+		04D706CA21F9A37F0024EDD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 249PMS4KB9;
+				INFOPLIST_FILE = TodayExtensionDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kunnan.KNTodayExtensionDemo.TodayExtensionDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04D706CB21F9A37F0024EDD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 249PMS4KB9;
+				INFOPLIST_FILE = TodayExtensionDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kunnan.KNTodayExtensionDemo.TodayExtensionDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -574,6 +723,15 @@
 			buildConfigurations = (
 				04D706B421F9A3720024EDD0 /* Debug */,
 				04D706B521F9A3720024EDD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04D706C921F9A37F0024EDD0 /* Build configuration list for PBXNativeTarget "TodayExtensionDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04D706CA21F9A37F0024EDD0 /* Debug */,
+				04D706CB21F9A37F0024EDD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
