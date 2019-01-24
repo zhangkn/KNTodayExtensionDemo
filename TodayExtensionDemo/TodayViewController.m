@@ -23,21 +23,47 @@
     //
     //扩展Widget高度：     // 将小部件展现模型设置为可展开
     //系统默认的高度为110
-    self.extensionContext.widgetLargestAvailableDisplayMode = NCWidgetDisplayModeExpanded;//使用3DTouch唤出的弹窗依旧是110，上面代码只是改变了通知中心的高度
+    [self setupData];
+//    self.extensionContext.widgetLargestAvailableDisplayMode = NCWidgetDisplayModeExpanded;//使用3DTouch唤出的弹窗依旧是110，上面代码只是改变了通知中心的高度
     //完成下面代理 widgetActiveDisplayModeDidChange：withMaximumSize
 
     
 }
 
-
-- (void)widgetActiveDisplayModeDidChange:(NCWidgetDisplayMode)activeDisplayMode withMaximumSize:(CGSize)maxSize {
-    if (activeDisplayMode == NCWidgetDisplayModeExpanded) {
-        // 设置展开的新高度
-        self.preferredContentSize = CGSizeMake(0, 400);
-    }else{
-        self.preferredContentSize = maxSize;
+-(void)setupData{
+    // 将小部件展现模型设置为可展开
+    if (@available(iOS 10.0, *)) {
+        self.extensionContext.widgetLargestAvailableDisplayMode = NCWidgetDisplayModeExpanded;
+    } else {
+        // Fallback on earlier versions
     }
 }
+
+
+
+
+- (void)widgetActiveDisplayModeDidChange:(NCWidgetDisplayMode)activeDisplayMode withMaximumSize:(CGSize)maxSize  API_AVAILABLE(ios(10.0)){
+    if (@available(iOS 10.0, *)) {
+        if (activeDisplayMode == NCWidgetDisplayModeExpanded) {
+            // 设置展开的新高度
+            self.preferredContentSize = CGSizeMake(0, 400);
+        }else{
+            self.preferredContentSize = maxSize;
+        }
+    } else {
+        
+    }
+}
+
+//
+//- (void)widgetActiveDisplayModeDidChange:(NCWidgetDisplayMode)activeDisplayMode withMaximumSize:(CGSize)maxSize {
+//    if (activeDisplayMode == NCWidgetDisplayModeExpanded) {
+//        // 设置展开的新高度
+//        self.preferredContentSize = CGSizeMake(0, 400);
+//    }else{
+//        self.preferredContentSize = maxSize;
+//    }
+//}
 
 //viewWillAppear is only called once for my widget, when it is first added to the Today view. After that, viewing the widget does not call viewWillAppear. This means that when new data is available and the user views the widget, it never gets a chance to update.
 -(void)viewWillAppear:(BOOL)animated {
