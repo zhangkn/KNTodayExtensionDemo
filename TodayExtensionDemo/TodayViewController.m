@@ -11,6 +11,8 @@
 
 @interface TodayViewController () <NCWidgetProviding>
 
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
 @end
 
 @implementation TodayViewController
@@ -37,14 +39,29 @@
     }
 }
 
-
+//viewWillAppear is only called once for my widget, when it is first added to the Today view. After that, viewing the widget does not call viewWillAppear. This means that when new data is available and the user views the widget, it never gets a chance to update.
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    //https://forums.developer.apple.com/thread/19172
+    self.titleLabel.text = @"Đang làm mới dữ liệu ...";
+    [self widgetPerformUpdateWithCompletionHandler:^(NCUpdateResult result) {
+    }];
+    
+}
+//#import "NCUpdateResultNewData"
+#pragma mark - ******** NCUpdateResultNewData。 目前没发现什么时候触发call
 - (void)widgetPerformUpdateWithCompletionHandler:(void (^)(NCUpdateResult))completionHandler {
     // Perform any setup necessary in order to update the view.
     
     // If an error is encountered, use NCUpdateResultFailed
     // If there's no update required, use NCUpdateResultNoData
     // If there's an update, use NCUpdateResultNewData
-
+    
+// 执行block，告诉界面进行数据update
+    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userDefaultsDidChange:)  name:NSUserDefaultsDidChangeNotification object:nil]
+    NSString * myData = [[[NSUserDefaults alloc] initWithSuiteName:@"group.com.kn.appExtension"] valueForKey:@"myShareData"];
+    self.titleLabel.text = myData ? myData : @"https://kunnan.github.io";
+    
     completionHandler(NCUpdateResultNewData);
 }
 
