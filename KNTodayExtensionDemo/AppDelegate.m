@@ -22,10 +22,24 @@
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];
     [self.window makeKeyAndVisible];
-
+    [self setupshortcutItems];
     return YES;
 }
 
+
+- (void)setupshortcutItems{
+    //系统图标
+    UIApplicationShortcutIcon *searchShortcutIcon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeSearch];
+    UIApplicationShortcutItem *searchShortcutItem = [[UIApplicationShortcutItem alloc] initWithType:@"search" localizedTitle:@"搜索" localizedSubtitle:@"搜索副标题" icon:searchShortcutIcon userInfo:nil];
+    // 自定义图标
+    UIApplicationShortcutIcon *attentionShortcutIcon = [UIApplicationShortcutIcon iconWithTemplateImageName:@"attention"];
+    UIApplicationShortcutItem *attentionShortcutItem = [[UIApplicationShortcutItem alloc] initWithType:@"attention" localizedTitle:@"关注" localizedSubtitle:@"关注副标题" icon:attentionShortcutIcon userInfo:nil];
+    // 系统低于9.0是没有这个属性的
+    if ([[UIApplication sharedApplication] respondsToSelector:@selector(shortcutItems)]) {
+        [UIApplication sharedApplication].shortcutItems = @[searchShortcutItem, attentionShortcutItem];
+    }
+    
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

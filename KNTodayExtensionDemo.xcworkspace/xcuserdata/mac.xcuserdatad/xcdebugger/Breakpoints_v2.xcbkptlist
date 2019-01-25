@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KNTodayExtensionDemo/AppDelegate.m"
-            timestampString = "570079060.979552"
+            timestampString = "570099626.23256"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "-application:openURL:options:"
             landmarkType = "7">
          </BreakpointContent>
