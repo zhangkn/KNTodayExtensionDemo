@@ -30,6 +30,11 @@
 #pragma mark - ******** 用代码创建应用图标上的3D touch快捷选项
 /** 用代码创建应用图标上的3D touch快捷选项  */
 - (void)setupshortcutItems{
+    
+    UIApplicationShortcutIcon *shareShortcutIcon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeShare];
+    UIApplicationShortcutItem *shareShortcutItem = [[UIApplicationShortcutItem alloc] initWithType:@"share" localizedTitle:@"share" localizedSubtitle:@"share app" icon:shareShortcutIcon userInfo:nil];
+
+    
     //系统图标
     UIApplicationShortcutIcon *searchShortcutIcon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeSearch];
     UIApplicationShortcutItem *searchShortcutItem = [[UIApplicationShortcutItem alloc] initWithType:@"search" localizedTitle:@"搜索" localizedSubtitle:@"搜索副标题" icon:searchShortcutIcon userInfo:nil];
@@ -38,7 +43,7 @@
     UIApplicationShortcutItem *attentionShortcutItem = [[UIApplicationShortcutItem alloc] initWithType:@"attention" localizedTitle:@"关注" localizedSubtitle:@"关注副标题" icon:attentionShortcutIcon userInfo:nil];
     // 系统低于9.0是没有这个属性的
     if ([[UIApplication sharedApplication] respondsToSelector:@selector(shortcutItems)]) {
-        [UIApplication sharedApplication].shortcutItems = @[searchShortcutItem, attentionShortcutItem];
+        [UIApplication sharedApplication].shortcutItems = @[searchShortcutItem, attentionShortcutItem,shareShortcutItem];
     }
     
 }
@@ -47,7 +52,7 @@
 - (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler{
 //    XMTabBarController *tabVC = (XMTabBarController *)self.window.rootViewController;
     //search
-    if([shortcutItem.type isEqualToString:@"search"]){
+    if([shortcutItem.type isEqualToString:@"share"]){
 
 //    if([shortcutItem.type isEqualToString:@"one"]){
         // 这个分享的3D touch快捷选项是从plist里面创建的
