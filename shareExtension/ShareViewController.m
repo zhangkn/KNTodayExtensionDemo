@@ -44,7 +44,18 @@
  */
 - (NSArray *)configurationItems {
     // To add configuration options via table cells at the bottom of the sheet, return an array of SLComposeSheetConfigurationItem here.
-    return @[];
+    
+    //SLComposeSheetConfigurationItem
+    
+    SLComposeSheetConfigurationItem *friendConfig = [[SLComposeSheetConfigurationItem alloc] init];
+    friendConfig.title = @"发送给朋友";
+    friendConfig.value = @"请选择";
+    [friendConfig setTapHandler:^{
+        NSLog(@"setTapHandler");
+    }];
+    
+    
+    return @[friendConfig];
 }
 
 @end
