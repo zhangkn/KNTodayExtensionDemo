@@ -11,6 +11,9 @@
 		04245BCB21F9C0040018E827 /* TodayItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04245BC821F9C0040018E827 /* TodayItemCell.m */; };
 		04245BCD21F9C5130018E827 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04245BCC21F9C5130018E827 /* MainInterface.storyboard */; };
 		04245BCE21F9C62A0018E827 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04D7068D21F9A3710024EDD0 /* Assets.xcassets */; };
+		04245BD921FAF48C0018E827 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04245BD821FAF48C0018E827 /* ShareViewController.m */; };
+		04245BDC21FAF48C0018E827 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04245BDA21FAF48C0018E827 /* MainInterface.storyboard */; };
+		04245BE021FAF48C0018E827 /* shareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 04245BD521FAF48C0018E827 /* shareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		04D7068621F9A3700024EDD0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D7068521F9A3700024EDD0 /* AppDelegate.m */; };
 		04D7068921F9A3700024EDD0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D7068821F9A3700024EDD0 /* ViewController.m */; };
 		04D7068C21F9A3700024EDD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D7068A21F9A3700024EDD0 /* Main.storyboard */; };
@@ -31,6 +34,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		04245BDE21FAF48C0018E827 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04D7067921F9A3700024EDD0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04245BD421FAF48C0018E827;
+			remoteInfo = shareExtension;
+		};
 		04D7069A21F9A3720024EDD0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 04D7067921F9A3700024EDD0 /* Project object */;
@@ -61,6 +71,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				04245BE021FAF48C0018E827 /* shareExtension.appex in Embed App Extensions */,
 				04D706C821F9A37F0024EDD0 /* TodayExtensionDemo.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -75,6 +86,11 @@
 		04245BCC21F9C5130018E827 /* MainInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		04245BCF21FAB50E0018E827 /* KNTodayExtensionDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KNTodayExtensionDemo.entitlements; sourceTree = "<group>"; };
 		04245BD021FAB5330018E827 /* TodayExtensionDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TodayExtensionDemo.entitlements; sourceTree = "<group>"; };
+		04245BD521FAF48C0018E827 /* shareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = shareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		04245BD721FAF48C0018E827 /* ShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		04245BD821FAF48C0018E827 /* ShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
+		04245BDB21FAF48C0018E827 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		04245BDD21FAF48C0018E827 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04D7068121F9A3700024EDD0 /* KNTodayExtensionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KNTodayExtensionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D7068421F9A3700024EDD0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04D7068521F9A3700024EDD0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -113,6 +129,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		04245BD221FAF48C0018E827 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04D7067E21F9A3700024EDD0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -149,6 +172,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04245BD621FAF48C0018E827 /* shareExtension */ = {
+			isa = PBXGroup;
+			children = (
+				04245BD721FAF48C0018E827 /* ShareViewController.h */,
+				04245BD821FAF48C0018E827 /* ShareViewController.m */,
+				04245BDA21FAF48C0018E827 /* MainInterface.storyboard */,
+				04245BDD21FAF48C0018E827 /* Info.plist */,
+			);
+			path = shareExtension;
+			sourceTree = "<group>";
+		};
 		04D7067821F9A3700024EDD0 = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +190,7 @@
 				04D7069C21F9A3720024EDD0 /* KNTodayExtensionDemoTests */,
 				04D706A721F9A3720024EDD0 /* KNTodayExtensionDemoUITests */,
 				04D706BE21F9A37F0024EDD0 /* TodayExtensionDemo */,
+				04245BD621FAF48C0018E827 /* shareExtension */,
 				04D706BB21F9A37F0024EDD0 /* Frameworks */,
 				04D7068221F9A3700024EDD0 /* Products */,
 				C3038B77571F664C801D3635 /* Pods */,
@@ -169,6 +204,7 @@
 				04D7069921F9A3720024EDD0 /* KNTodayExtensionDemoTests.xctest */,
 				04D706A421F9A3720024EDD0 /* KNTodayExtensionDemoUITests.xctest */,
 				04D706BA21F9A37F0024EDD0 /* TodayExtensionDemo.appex */,
+				04245BD521FAF48C0018E827 /* shareExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -263,6 +299,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		04245BD421FAF48C0018E827 /* shareExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04245BE321FAF48C0018E827 /* Build configuration list for PBXNativeTarget "shareExtension" */;
+			buildPhases = (
+				04245BD121FAF48C0018E827 /* Sources */,
+				04245BD221FAF48C0018E827 /* Frameworks */,
+				04245BD321FAF48C0018E827 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = shareExtension;
+			productName = shareExtension;
+			productReference = 04245BD521FAF48C0018E827 /* shareExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		04D7068021F9A3700024EDD0 /* KNTodayExtensionDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04D706AD21F9A3720024EDD0 /* Build configuration list for PBXNativeTarget "KNTodayExtensionDemo" */;
@@ -277,6 +330,7 @@
 			);
 			dependencies = (
 				04D706C721F9A37F0024EDD0 /* PBXTargetDependency */,
+				04245BDF21FAF48C0018E827 /* PBXTargetDependency */,
 			);
 			name = KNTodayExtensionDemo;
 			productName = KNTodayExtensionDemo;
@@ -348,6 +402,9 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = kunnan;
 				TargetAttributes = {
+					04245BD421FAF48C0018E827 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					04D7068021F9A3700024EDD0 = {
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
@@ -391,11 +448,20 @@
 				04D7069821F9A3720024EDD0 /* KNTodayExtensionDemoTests */,
 				04D706A321F9A3720024EDD0 /* KNTodayExtensionDemoUITests */,
 				04D706B921F9A37F0024EDD0 /* TodayExtensionDemo */,
+				04245BD421FAF48C0018E827 /* shareExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		04245BD321FAF48C0018E827 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04245BDC21FAF48C0018E827 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04D7067F21F9A3700024EDD0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -524,6 +590,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		04245BD121FAF48C0018E827 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04245BD921FAF48C0018E827 /* ShareViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04D7067D21F9A3700024EDD0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -564,6 +638,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		04245BDF21FAF48C0018E827 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04245BD421FAF48C0018E827 /* shareExtension */;
+			targetProxy = 04245BDE21FAF48C0018E827 /* PBXContainerItemProxy */;
+		};
 		04D7069B21F9A3720024EDD0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 04D7068021F9A3700024EDD0 /* KNTodayExtensionDemo */;
@@ -582,6 +661,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		04245BDA21FAF48C0018E827 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04245BDB21FAF48C0018E827 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		04D7068A21F9A3700024EDD0 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -601,6 +688,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		04245BE121FAF48C0018E827 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 249PMS4KB9;
+				INFOPLIST_FILE = shareExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kunnan.KNTodayExtensionDemo1.shareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04245BE221FAF48C0018E827 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 249PMS4KB9;
+				INFOPLIST_FILE = shareExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kunnan.KNTodayExtensionDemo1.shareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		04D706AB21F9A3720024EDD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -872,6 +995,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		04245BE321FAF48C0018E827 /* Build configuration list for PBXNativeTarget "shareExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04245BE121FAF48C0018E827 /* Debug */,
+				04245BE221FAF48C0018E827 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		04D7067C21F9A3700024EDD0 /* Build configuration list for PBXProject "KNTodayExtensionDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
