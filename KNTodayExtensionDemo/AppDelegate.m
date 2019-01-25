@@ -53,7 +53,16 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#warning todo
+/**
+ 1、先判断界面顶部的当前控制器的类型，如果是登陆界面，就等登陆成功之后进行对应跳转
+ 2、如果顶部控制器的类型就是即将跳转的界面，就不做任何动作
 
+ @param app <#app description#>
+ @param url <#url description#>
+ @param options <#options description#>
+ @return <#return value description#>
+ */
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
     // 可以先回到应用首页，在跳转
     if ([url.absoluteString hasPrefix:@"knTodayExtensionDemo"]) {
