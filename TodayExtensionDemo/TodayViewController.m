@@ -134,7 +134,7 @@
     
 }
 //#import "NCUpdateResultNewData"
-#pragma mark - ******** NCUpdateResultNewData。 目前没发现什么时候触发call
+#pragma mark - ******** NCUpdateResultNewData。 目前没发现什么时候触发call，但是代码已经确实执行了
 - (void)widgetPerformUpdateWithCompletionHandler:(void (^)(NCUpdateResult))completionHandler {
     // Perform any setup necessary in order to update the view.
     
@@ -144,8 +144,10 @@
     
 // 执行block，告诉界面进行数据update
     //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userDefaultsDidChange:)  name:NSUserDefaultsDidChangeNotification object:nil]
-    NSString * myData = [[[NSUserDefaults alloc] initWithSuiteName:@"group.com.kn.appExtension"] valueForKey:@"myShareData"];
+    NSString * myData = [[[NSUserDefaults alloc] initWithSuiteName:@"group.kunnan.KNTodayExtensionDemo1.TodayExtensionDemo"] valueForKey:@"myShareData"];
     self.titleLabel.text = myData ? myData : @"https://kunnan.github.io";
+    
+    NSLog(@"kunnan.github.io: %@",self.titleLabel.text);
     
     completionHandler(NCUpdateResultNewData);
 }

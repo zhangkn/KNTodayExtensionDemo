@@ -24,12 +24,19 @@
     self.tableView.tableFooterView = [UIView new];
     [self.view addSubview:self.tableView];
     
-//    UIBarButtonItem * rightItem = [[UIBarButtonItem alloc] initWithTitle:@"切换标题" style:UIBarButtonItemStylePlain target:self action:@selector(clickSwitchTitleEvent)];
-//    self.navigationItem.rightBarButtonItem = rightItem;
-
-
+    // 2、测试扩展和宿主app的数据共享
+    UIBarButtonItem * rightItem = [[UIBarButtonItem alloc] initWithTitle:@"切换共享数据" style:UIBarButtonItemStylePlain target:self action:@selector(clickSwitchTitleEvent)];
+    self.navigationItem.rightBarButtonItem = rightItem;
 }
-
+//切换通知栏标题
+-(void)clickSwitchTitleEvent{
+    NSArray * arr = @[@"生活有度，人生添寿。 —— 书摘",@"理想是人生的太阳。 —— 德莱赛",@"不是老人变坏了，而是坏人变老了",@"人生苦短，必须性感"];
+    NSInteger index = arc4random_uniform(arr.count);
+    // 存储数据
+    self.title = arr[index];
+    //kunnan.KNTodayExtensionDemo1.TodayExtensionDemo
+    [[[NSUserDefaults alloc] initWithSuiteName:@"group.kunnan.KNTodayExtensionDemo1.TodayExtensionDemo"] setValue:self.title forKey:@"myShareData"];
+}
 
 -(NSMutableArray *)dataArray{
     if (!_dataArray) {

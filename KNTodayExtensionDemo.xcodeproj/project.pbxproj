@@ -73,6 +73,8 @@
 		04245BC821F9C0040018E827 /* TodayItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayItemCell.m; sourceTree = "<group>"; };
 		04245BC921F9C0040018E827 /* TodayItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TodayItemCell.h; path = ../../../github/TodayExtension/TodayExtentsion/TodayItemCell.h; sourceTree = "<group>"; };
 		04245BCC21F9C5130018E827 /* MainInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		04245BCF21FAB50E0018E827 /* KNTodayExtensionDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KNTodayExtensionDemo.entitlements; sourceTree = "<group>"; };
+		04245BD021FAB5330018E827 /* TodayExtensionDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TodayExtensionDemo.entitlements; sourceTree = "<group>"; };
 		04D7068121F9A3700024EDD0 /* KNTodayExtensionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KNTodayExtensionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D7068421F9A3700024EDD0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04D7068521F9A3700024EDD0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 		04D7068321F9A3700024EDD0 /* KNTodayExtensionDemo */ = {
 			isa = PBXGroup;
 			children = (
+				04245BCF21FAB50E0018E827 /* KNTodayExtensionDemo.entitlements */,
 				04D706CD21F9B7410024EDD0 /* model */,
 				04D7068421F9A3700024EDD0 /* AppDelegate.h */,
 				04D7068521F9A3700024EDD0 /* AppDelegate.m */,
@@ -221,6 +224,7 @@
 		04D706BE21F9A37F0024EDD0 /* TodayExtensionDemo */ = {
 			isa = PBXGroup;
 			children = (
+				04245BD021FAB5330018E827 /* TodayExtensionDemo.entitlements */,
 				04D706BF21F9A37F0024EDD0 /* TodayViewController.h */,
 				04D706C021F9A37F0024EDD0 /* TodayViewController.m */,
 				04245BC921F9C0040018E827 /* TodayItemCell.h */,
@@ -346,6 +350,11 @@
 				TargetAttributes = {
 					04D7068021F9A3700024EDD0 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					04D7069821F9A3720024EDD0 = {
 						CreatedOnToolsVersion = 10.1;
@@ -357,6 +366,11 @@
 					};
 					04D706B921F9A37F0024EDD0 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -704,6 +718,7 @@
 			baseConfigurationReference = D91D670E83144BD593B464D0 /* Pods-KNTodayExtensionDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KNTodayExtensionDemo/KNTodayExtensionDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 249PMS4KB9;
 				INFOPLIST_FILE = KNTodayExtensionDemo/Info.plist;
@@ -711,7 +726,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kunnan.KNTodayExtensionDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = kunnan.KNTodayExtensionDemo1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -722,6 +737,7 @@
 			baseConfigurationReference = BD225834784FDC9692E41596 /* Pods-KNTodayExtensionDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KNTodayExtensionDemo/KNTodayExtensionDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 249PMS4KB9;
 				INFOPLIST_FILE = KNTodayExtensionDemo/Info.plist;
@@ -729,7 +745,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kunnan.KNTodayExtensionDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = kunnan.KNTodayExtensionDemo1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -817,6 +833,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1AEF27A21C018F4C6B813A21 /* Pods-TodayExtensionDemo.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TodayExtensionDemo/TodayExtensionDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 249PMS4KB9;
 				INFOPLIST_FILE = TodayExtensionDemo/Info.plist;
@@ -825,7 +842,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kunnan.KNTodayExtensionDemo.TodayExtensionDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = kunnan.KNTodayExtensionDemo1.TodayExtensionDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -836,6 +853,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FA2FD102DB4913A854DB0613 /* Pods-TodayExtensionDemo.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TodayExtensionDemo/TodayExtensionDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 249PMS4KB9;
 				INFOPLIST_FILE = TodayExtensionDemo/Info.plist;
@@ -844,7 +862,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kunnan.KNTodayExtensionDemo.TodayExtensionDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = kunnan.KNTodayExtensionDemo1.TodayExtensionDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
