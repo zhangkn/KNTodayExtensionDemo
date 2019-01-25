@@ -27,6 +27,8 @@
 }
 
 
+#pragma mark - ******** 用代码创建应用图标上的3D touch快捷选项
+/** 用代码创建应用图标上的3D touch快捷选项  */
 - (void)setupshortcutItems{
     //系统图标
     UIApplicationShortcutIcon *searchShortcutIcon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeSearch];
@@ -40,6 +42,32 @@
     }
     
 }
+
+/** 3D touch快捷选项触发事件 */
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler{
+//    XMTabBarController *tabVC = (XMTabBarController *)self.window.rootViewController;
+    //search
+    if([shortcutItem.type isEqualToString:@"search"]){
+
+//    if([shortcutItem.type isEqualToString:@"one"]){
+        // 这个分享的3D touch快捷选项是从plist里面创建的
+        NSArray *arr = @[@"Hello 3D Touch--分享"];// 分析的内容
+        UIActivityViewController *vc = [[UIActivityViewController alloc]initWithActivityItems:arr applicationActivities:nil];
+        [self.window.rootViewController presentViewController:vc animated:YES completion:^{
+        }];
+    } else if ([shortcutItem.type isEqualToString:@"save"]) {//进入珍藏界面
+//        [tabVC callSave];
+    }else if ([shortcutItem.type isEqualToString:@"search"]) {//进入搜索界面
+//        [tabVC callSearch];
+    }
+    else if ([shortcutItem.type isEqualToString:@"scan"]) {//进入扫描二维码界面
+//        [tabVC callScanQRCode];
+    }
+    else if ([shortcutItem.type isEqualToString:@"toolbox"]) {//进入工具箱
+//        [tabVC callToolbox];
+    }
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
